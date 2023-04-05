@@ -233,8 +233,6 @@ class _DoctorsProfileState extends State<DoctorsProfile> {
                   height: 20,
                 ),
                 CSCPicker(
-                  showStates: true,
-                  showCities: true,
                   dropdownDecoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(40),
