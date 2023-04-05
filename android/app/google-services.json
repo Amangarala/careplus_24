@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "853520475136",
+    "project_id": "careplus-24",
+    "storage_bucket": "careplus-24.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853520475136:android:eb4157207390df510f64e5",
+        "android_client_info": {
+          "package_name": "com.example.careplus_24"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853520475136-4e21hf832bg252dbtt56mvnur6rim5h2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA3BFDLbHO6ToSYqREOw7hJOUmlNrdgrUU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853520475136-4e21hf832bg252dbtt56mvnur6rim5h2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
