@@ -233,6 +233,11 @@ class _DoctorsProfileState extends State<DoctorsProfile> {
                   height: 20,
                 ),
                 CSCPicker(
+                  showCities: true,
+                  showStates: true,
+                  countryDropdownLabel: "Select Country",
+                  stateDropdownLabel: "Select State",
+                  cityDropdownLabel: "Select City",
                   dropdownDecoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(40),
@@ -253,9 +258,6 @@ class _DoctorsProfileState extends State<DoctorsProfile> {
                       cityValue = city!;
                     });
                   },
-                  countryDropdownLabel: "Select Country",
-                  stateDropdownLabel: "Select State",
-                  cityDropdownLabel: "Select City",
                   dropdownDialogRadius: 40,
                   searchBarRadius: 40,
                 ),
