@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, deprecated_member_use
 
 // ignore: unused_import
 import 'package:careplus_24/Access/home.dart';
@@ -10,10 +10,7 @@ import 'package:csc_picker/csc_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
-import 'package:get/get.dart';
 import 'package:intl/intl.dart';
-import 'package:intl_phone_field/country_picker_dialog.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class DoctorsProfile extends StatefulWidget {
@@ -290,13 +287,6 @@ class _DoctorsProfileState extends State<DoctorsProfile> {
                       options: DefaultFirebaseOptions.currentPlatform,
                     );
 
-                    // if (formKey.currentState!.validate()) {
-
-                    //   postDetailsToFirestore().catchError((e) {
-                    //     Fluttertoast.showToast(msg: e!.message);
-                    //   }
-                    //   );
-                    // }
                     profileDetailsToFirestore();
                   },
                   style: ElevatedButton.styleFrom(
@@ -323,38 +313,6 @@ class _DoctorsProfileState extends State<DoctorsProfile> {
     );
   }
 
-  // profileDetailsToFirestore() async {
-  //   //Calling firestore
-
-  //   FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
-
-  //   //Calling our user model
-  //   User? user = FirebaseAuth.instance.currentUser;
-  //   UserModel profileModel = UserModel();
-
-  //   //Writing all values
-
-  //   profileModel.name = _name.text;
-  //   profileModel.phoneNumber = _phoneNumber.text;
-  //   profileModel.qualification = _qualification.text;
-  //   profileModel.dob = _date.text;
-  //   profileModel.age = _age.text;
-  //   profileModel.bloodType = _bloodgroup.text;
-  //   profileModel.address = _address.text;
-
-  //   await firebaseFirestore
-  //       .collection("users")
-  //       .doc(user!.uid)
-  //       .set(profileModel.toMap());
-
-  //   Fluttertoast.showToast(msg: "Profile Created Successfully");
-
-  //   Navigator.pushAndRemoveUntil(
-  //       (context),
-  //       MaterialPageRoute(builder: (context) => const Home()),
-  //       (route) => false);
-  // }
-
   profileDetailsToFirestore() async {
     final fireStore = FirebaseFirestore.instance.collection("doctordetails");
     User? user = FirebaseAuth.instance.currentUser;
@@ -375,7 +333,7 @@ class _DoctorsProfileState extends State<DoctorsProfile> {
     profileModel.state = stateValue;
     profileModel.city = cityValue;
     String id = DateTime.now().millisecondsSinceEpoch.toString();
-    //fireStore.doc(signup.id);
+
     fireStore.doc(id).set(profileModel.toMap());
     Navigator.pushAndRemoveUntil(
         (context),

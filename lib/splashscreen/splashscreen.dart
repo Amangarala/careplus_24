@@ -31,26 +31,10 @@ class _SplashScreenState extends State<SplashScreen> {
     super.initState();
     Timer(Duration(seconds: 5), () {
       onBoardInfo();
-      // optionsInfo();
-      // loginInfo();
-      // signUpInfo();
 
       Navigator.of(context).pushReplacement(MaterialPageRoute(
         builder: (_) => isViewed != 0 ? OnbordingScreen() : options(),
       ));
-
-      // if (isViewed == 0 &&
-      //     isvisited == 0 &&
-      //     islogg == true &&
-      //     isSignUp == true) {
-      //   Get.offAll(Home());
-      // }
-      // if (isViewed != 0) {
-      //   Get.offAll(OnbordingScreen());
-      // }
-      // if (islogg != true) {
-      //   Get.offAll(login());
-      // }
     });
   }
 
@@ -58,21 +42,6 @@ class _SplashScreenState extends State<SplashScreen> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     isViewed = prefs.getInt('onBoard');
   }
-
-  // optionsInfo() async {
-  //   SharedPreferences prefer = await SharedPreferences.getInstance();
-  //   isvisited = prefer.getInt('Options');
-  // }
-
-  // loginInfo() async {
-  //   SharedPreferences prefin = await SharedPreferences.getInstance();
-  //   islogg = prefin.getBool('Log');
-  // }
-
-  // signUpInfo() async {
-  //   SharedPreferences prefup = await SharedPreferences.getInstance();
-  //   isSignUp = prefup.getBool('Up');
-  // }
 
   Widget build(BuildContext context) {
     return Scaffold(

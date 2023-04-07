@@ -243,45 +243,7 @@ class _signupState extends State<signup> {
     );
   }
 
-//   postDetailsToFirestore() async {
-//     //Calling firestore
-
-//     FirebaseFirestore firebaseFirestore = FirebaseFirestore.instance;
-
-//     //Calling our user model
-//     User? user = FirebaseAuth.instance.currentUser;
-//     UserModel userModel = UserModel();
-
-//     //Writing all values
-
-//     userModel.email = user!.email;
-//     userModel.uid = user.uid;
-//     userModel.userName = _usernameTextController.text;
-
-//     await firebaseFirestore
-//         .collection("users")
-//         .doc(user.uid)
-//         .set(userModel.toMap());
-
-//     Fluttertoast.showToast(msg: "Account created successfully");
-
-//     Navigator.pushAndRemoveUntil(
-//         (context),
-//         MaterialPageRoute(builder: (context) => doctorPatient()),
-//         (route) => false);
-//   }
-// }
-//   String id = DateTime.now().millisecondsSinceEpoch.toString();
   postDetailsToFirestore() async {
-    // final fireStore = FirebaseFirestore.instance.collection("details");
-    // User? user = FirebaseAuth.instance.currentUser;
-    // UserModel userModel = UserModel();
-
-    // userModel.email = user!.email;
-    // userModel.uid = user.uid;
-    // userModel.userName = _usernameTextController.text;
-
-    // await fireStore.doc(id).set(userModel.toMap());
     Navigator.pushAndRemoveUntil(
         (context),
         MaterialPageRoute(builder: (context) => doctorPatient()),

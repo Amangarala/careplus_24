@@ -3,20 +3,6 @@
 import 'package:careplus_24/Access/home.dart';
 import 'package:flutter/material.dart';
 
-// void main() {
-//   runApp(MyApp());
-// }
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return const MaterialApp(
-//       title: 'care palue 24',
-//       home: home_screen_user(),
-//     );
-//   }
-// }
-
 class patientdashboardscreen extends StatefulWidget {
   const patientdashboardscreen({Key? key}) : super(key: key);
 
@@ -31,9 +17,7 @@ class _patientdashboardscreenState extends State<patientdashboardscreen> {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Container(
-        //padding: EdgeInsets.only(top: 300),
         color: const Color(0xffd2fcff),
-        //padding: EdgeInsets.only(top: 300),
         child: Stack(
           children: [
             Image.asset(
@@ -95,10 +79,8 @@ class _patientdashboardscreenState extends State<patientdashboardscreen> {
                 Row(
                   children: [
                     Container(
-                      // margin: const EdgeInsets.only(top: 50, left: 85),
                       padding: EdgeInsets.only(
                         top: MediaQuery.of(context).size.height * 0.1,
-                        //right: 35,
                         right: 0,
                       ),
                       child: const Text(

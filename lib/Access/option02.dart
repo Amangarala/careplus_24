@@ -8,9 +8,6 @@ import 'package:get/get_core/get_core.dart';
 import 'package:get/get_navigation/get_navigation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-// bool? islogg;
-// bool? isSignUp;
-
 class options extends StatefulWidget {
   const options({Key? key}) : super(key: key);
 
@@ -24,25 +21,8 @@ class _optionsState extends State<options> {
     int isvisited = 0;
     await prefer.setInt("Options", isvisited);
   }
-  // loginInfo() async {
-  //   SharedPreferences prefin = await SharedPreferences.getInstance();
-  //   islogg = prefin.getBool('Log');
-  // }
-
-  // signUpInfo() async {
-  //   SharedPreferences prefup = await SharedPreferences.getInstance();
-  //   isSignUp = prefup.getBool('Up');
-  // }
 
   @override
-  // void initState() {
-  // ignore: todo
-  //   // TODO: implement initState
-  //   super.initState();
-  //   // loginInfo();
-  //   // signUpInfo();
-  // }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -61,10 +41,8 @@ class _optionsState extends State<options> {
                 children: [
                   ElevatedButton(
                     onPressed: () {
-                      //checkOptions();
                       Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (_) => signup()));
-                      //Get.to(signup());
                     },
                     child: const Text(
                       'create new account',
@@ -89,7 +67,6 @@ class _optionsState extends State<options> {
                       checkOptions();
                       Navigator.of(context).pushReplacement(
                           MaterialPageRoute(builder: (_) => login()));
-                      // Get.to(login());
                     },
                     child: const Text(
                       'login to existing account',

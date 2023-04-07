@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_literals_to_create_immutables, deprecated_member_use
 
 // ignore: unused_import
 import 'package:careplus_24/Access/home.dart';
@@ -225,10 +225,7 @@ class _PatientsProfileState extends State<PatientsProfile> {
                     await Firebase.initializeApp(
                       options: DefaultFirebaseOptions.currentPlatform,
                     );
-                    //  checkSignUp();
-                    // if (formkey.currentState!.validate()) {
 
-                    // }
                     profileDetailsToFirestore();
                   },
                   style: ElevatedButton.styleFrom(

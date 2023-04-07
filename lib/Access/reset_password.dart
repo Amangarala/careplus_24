@@ -1,4 +1,4 @@
-// ignore_for_file: camel_case_types, prefer_const_constructors, sort_child_properties_last, non_constant_identifier_names, unused_element, dead_code, no_logic_in_create_state, unused_field, unused_import
+// ignore_for_file: camel_case_types, prefer_const_constructors, sort_child_properties_last, non_constant_identifier_names, unused_element, dead_code, no_logic_in_create_state, unused_field, unused_import, deprecated_member_use
 
 import 'package:careplus_24/Access/home.dart';
 import 'package:careplus_24/Access/signup.dart';
